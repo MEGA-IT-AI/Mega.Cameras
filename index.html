@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ميجا للكاميرات المراقبة | حماية متكاملة لمنزلك وشركتك</title>
+    <!-- استيراد خطوط عربية مميزة من جوجل فونتس -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Tajawal:wght@500;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #00b4d8; /* الأزرق السماوي الأساسي */
+            --secondary-color: #0096b4;
+            --accent-color: #00b4d8;
+            --text-color: #334155;
+            --bg-light: #f1faee;
+            --white: #ffffff;
+            --danger-color: #ef4444;
+            --whatsapp-color: #22c55e;
+            --logo-color: #ffd166; /* اللون الأصفر الذهبي */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* الهيدر */
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--white);
+        }
+
+        /* تحسين خط اللوجو النصي: عريض جداً وواضح ومتحرك */
+        @keyframes text-pulse {
+            0% { 
+                transform: scale(1); 
+                opacity: 0.95; 
+            }
+            50% { 
+                transform: scale(1.04); 
+                opacity: 1; 
+                text-shadow: 0 0 14px rgba(255, 209, 102, 0.8), 0 0 2px rgba(0,0,0,0.2); 
+            }
+            100% { 
+                transform: scale(1); 
+                opacity: 0.95; 
+            }
+        }
+
+        .header-logo-text {
+            font-family: 'Cairo', sans-serif; /* خط القاهرة الثقيل والواضح */
+            font-size: 1.7rem; /* حجم أكبر لجعل الخط عريض وبارز */
+            font-weight: 900; /* أثقل سمك للخط */
+            color: var(--logo-color);
+            text-decoration: none;
+            display: inline-block;
+            animation: text-pulse 2.5s infinite ease-in-out;
+            letter-spacing: 0.8px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            transition: opacity 0.3s;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            opacity: 0.8;
+        }
+
+        /* حاوية قائمة اتصل بنا في الهيدر */
+        .nav-contact-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .nav-contact-btn {
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            font-family: 'Tajawal', sans-serif;
+            transition: opacity 0.3s;
+        }
+
+        .nav-contact-btn:hover {
+            opacity: 0.8;
+        }
+
+        .nav-sub-icons {
+            display: none;
+            position: absolute;
+            top: 130%;
+            left: 0;
+            background: var(--white);
+            padding: 0.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            gap: 0.5rem;
+            z-index: 10;
+            white-space: nowrap;
+            flex-direction: column;
+        }
+
+        .nav-sub-icons.show {
+            display: flex;
+        }
+
+        .nav-sub-btn {
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            color: var(--white);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-align: center;
+            display: block;
+        }
+
+        /* الواجهة الرئيسية */
+        .hero {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 4rem 2rem 5rem 2rem;
+            position: relative;
+        }
+
+        .hero-img-container {
+            max-width: 750px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .hero-img-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        .hero h1 {
+            font-family: 'Cairo', sans-serif;
+            font-size: 2.3rem;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            color: var(--white);
+            opacity: 0.95;
+        }
+
+        /* إعدادات حركة النبض بتوهج باللون الأصفر الذهبي */
+        @keyframes pulse-animation {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255, 209, 102, 0.6);
+            }
+            50% {
+                transform: scale(1.06);
+                box-shadow: 0 0 0 14px rgba(255, 209, 102, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255, 209, 102, 0);
+            }
+        }
+
+        /* زر اطلب معاينة مجانية بنفس درجة الأصفر الذهبي */
+        .btn {
+            background-color: var(--logo-color);
+            color: var(--primary-color);
+            padding: 0.9rem 2.2rem;
+            border: none;
+            border-radius: 30px;
+            font-weight: 800;
+            font-size: 1.05rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            animation: pulse-animation 2s infinite;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #ffe08a;
+            animation: none;
+            transform: scale(1.08);
+        }
+
+        /* حاوية زر المعاينة والأيقونات الفرعية */
+        .cta-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .btn.clicked {
+            background-color: var(--danger-color) !important;
+            color: var(--white) !important;
+            animation: none !important;
+        }
+
+        .sub-icons {
+            display: none;
+            position: absolute;
+            top: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--white);
+            padding: 0.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            gap: 0.5rem;
+            z-index: 10;
+            white-space: nowrap;
+        }
+
+        .sub-icons.show {
+            display: flex;
+        }
+
+        .sub-btn {
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            color: var(--white);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            display: inline-block;
+        }
+
+        .whatsapp-btn {
+            background-color: var(--whatsapp-color);
+        }
+
+        .call-btn {
+            background-color: var(--danger-color);
+        }
+
+        /* حاوية الأقسام */
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+            font-family: 'Cairo', sans-serif;
+        }
+
+        /* شبكة الخدمات/المنتجات */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-img {
+            height: 180px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .service-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .service-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .service-desc {
+            font-size: 0.95rem;
+            color: #64748b;
+            margin-bottom: 1.5rem;
+        }
+
+        /* الفوتر */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 2.5rem 2rem;
+            margin-top: 4rem;
+            border-top: 2px solid var(--white);
+        }
+
+        footer p {
+            color: var(--white);
+        }
+
+        /* التجاوب مع الهواتف */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            .header-logo-text {
+                font-size: 1.3rem;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الهيدر -->
+    <header>
+        <!-- النص بخط عريض، واضح، ومتحرك -->
+        <a href="#home" class="header-logo-text">ميجا لكاميرات المراقبة والامنية</a>
+        <nav>
+            <ul>
+                <li><a href="#home">الرئيسية</a></li>
+                <li>
+                    <div class="nav-contact-container">
+                        <button class="nav-contact-btn" onclick="toggleNavContact()">📞 اتصل بنا</button>
+                        <div id="navSubIcons" class="nav-sub-icons">
+                            <a href="https://wa.me/201010255123" target="_blank" class="nav-sub-btn whatsapp-btn">واتساب</a>
+                            <a href="tel:01010255123" class="nav-sub-btn call-btn">اتصال هاتفي</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- الواجهة الرئيسية -->
+    <section id="home" class="hero">
+        <div class="hero-img-container">
+            <img src="1.png" alt="ميجا للكاميرات المراقبة">
+        </div>
+
+        <h1>أمانك يبدأ من هنا.. راقب ممتلكاتك لحظة بلحظة</h1>
+        <p>نقدم أفضل حلول كاميرات المراقبة الأمنية (Hikvision & HiLook)، أجهزة التسجيل الرقمي DVR/NVR، وأنظمة الإنذار الذكية للمنازل والشركات والمحلات التجارية.</p>
+
+        <div class="cta-container">
+            <button id="inspectBtn" class="btn" onclick="toggleSubIcons()">اطلب معاينة مجانية</button>
+            <div id="subIcons" class="sub-icons">
+                <a href="https://wa.me/201010255123" target="_blank" class="sub-btn whatsapp-btn">واتساب</a>
+                <a href="tel:01010255123" class="sub-btn call-btn">اتصال</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المنتجات والخدمات -->
+    <div id="services" class="container">
+        <h2 class="section-title">حلول المراقبة والحماية</h2>
+        <div class="services-grid">
+            <!-- خدمة 1 -->
+            <div class="service-card">
+                <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=500&q=80');"></div>
+                <div class="service-info">
+                    <h3 class="service-title">كاميرات المراقبة الداخلية والخارجية</h3>
+                    <p class="service-desc">كاميرات بدقة عالية جداً (HD / 4K) مع خاصية الرؤية الليلية الملونة ومقاومة العوامل الجوية.</p>
+                    <a href="#contact" class="btn" style="background-color: var(--primary-color); color: var(--white); padding: 0.5rem 1rem; font-size: 0.9rem; animation: none;">استفسر عن المنتج</a>
+                </div>
+            </div>
+            <!-- خدمة 2 -->
+            <div class="service-card">
+                <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=500&q=80');"></div>
+                <div class="service-info">
+                    <h3 class="service-title">أنظمة الربط والمتابعة عبر الهواتف</h3>
+                    <p class="service-desc">تابع كاميراتك مباشرة من هاتفك الذكي أينما كنت عبر تطبيقات آمنة وسريعة البث المباشر.</p>
+                    <a href="#contact" class="btn" style="background-color: var(--primary-color); color: var(--white); padding: 0.5rem 1rem; font-size: 0.9rem; animation: none;">استفسر عن المنتج</a>
+                </div>
+            </div>
+            <!-- خدمة 3 -->
+            <div class="service-card">
+                <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=500&q=80');"></div>
+                <div class="service-info">
+                    <h3 class="service-title">أجهزة التسجيل وأجهزة الإنذار</h3>
+                    <p class="service-desc">أجهزة DVR و NVR بأحجام تخزين عالية، بالإضافة إلى أنظمة الإنذار ضد السرقة والحريق.</p>
+                    <a href="#contact" class="btn" style="background-color: var(--primary-color); color: var(--white); padding: 0.5rem 1rem; font-size: 0.9rem; animation: none;">استفسر عن المنتج</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- الفوتر وتفاصيل الاتصال -->
+    <footer id="contact">
+        <p>جميع الحقوق محفوظة © 2026 - ميجا للكاميرات المراقبة</p>
+        <p style="margin-top: 0.5rem; font-size: 0.95rem; color: var(--white); opacity: 0.9;">للحجز والاستفسار والصيانة: 01010255123 | خدمة العملاء متاحة 24/7</p>
+    </footer>
+
+    <script>
+        // دالة زر المعاينة الرئيسية
+        function toggleSubIcons() {
+            const btn = document.getElementById('inspectBtn');
+            const subIcons = document.getElementById('subIcons');
+            
+            btn.classList.toggle('clicked');
+            subIcons.classList.toggle('show');
+        }
+
+        // دالة قائمة اتصل بنا في الهيدر
+        function toggleNavContact() {
+            const navSubIcons = document.getElementById('navSubIcons');
+            navSubIcons.classList.toggle('show');
+        }
+
+        // إغلاق القوائم عند النقر في أي مكان خارجها
+        window.addEventListener('click', function(e) {
+            const ctaContainer = document.querySelector('.cta-container');
+            if (ctaContainer && !ctaContainer.contains(e.target)) {
+                document.getElementById('inspectBtn').classList.remove('clicked');
+                document.getElementById('subIcons').classList.remove('show');
+            }
+
+            const navContainer = document.querySelector('.nav-contact-container');
+            if (navContainer && !navContainer.contains(e.target)) {
+                document.getElementById('navSubIcons').classList.remove('show');
+            }
+        });
+    </script>
+
+</body>
+</html>
