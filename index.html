@@ -46,7 +46,6 @@
             border-bottom: 2px solid var(--white);
         }
 
-        /* تحسين خط اللوجو النصي: عريض جداً وواضح ومتحرك */
         @keyframes text-pulse {
             0% { 
                 transform: scale(1); 
@@ -64,9 +63,9 @@
         }
 
         .header-logo-text {
-            font-family: 'Cairo', sans-serif; /* خط القاهرة الثقيل والواضح */
-            font-size: 1.7rem; /* حجم أكبر لجعل الخط عريض وبارز */
-            font-weight: 900; /* أثقل سمك للخط */
+            font-family: 'Cairo', sans-serif;
+            font-size: 1.7rem;
+            font-weight: 900;
             color: var(--logo-color);
             text-decoration: none;
             display: inline-block;
@@ -93,7 +92,6 @@
             opacity: 0.8;
         }
 
-        /* حاوية قائمة اتصل بنا في الهيدر */
         .nav-contact-container {
             position: relative;
             display: inline-block;
@@ -183,7 +181,6 @@
             opacity: 0.95;
         }
 
-        /* إعدادات حركة النبض بتوهج باللون الأصفر الذهبي */
         @keyframes pulse-animation {
             0% {
                 transform: scale(1);
@@ -199,7 +196,6 @@
             }
         }
 
-        /* زر اطلب معاينة مجانية بنفس درجة الأصفر الذهبي */
         .btn {
             background-color: var(--logo-color);
             color: var(--primary-color);
@@ -221,7 +217,6 @@
             transform: scale(1.08);
         }
 
-        /* حاوية زر المعاينة والأيقونات الفرعية */
         .cta-container {
             position: relative;
             display: inline-block;
@@ -270,7 +265,6 @@
             background-color: var(--danger-color);
         }
 
-        /* حاوية الأقسام */
         .container {
             max-width: 1200px;
             margin: auto;
@@ -285,7 +279,6 @@
             font-family: 'Cairo', sans-serif;
         }
 
-        /* شبكة الخدمات/المنتجات */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -329,7 +322,6 @@
             margin-bottom: 1.5rem;
         }
 
-        /* الفوتر */
         footer {
             background-color: var(--primary-color);
             color: var(--white);
@@ -343,7 +335,6 @@
             color: var(--white);
         }
 
-        /* التجاوب مع الهواتف */
         @media (max-width: 768px) {
             nav ul {
                 display: none;
@@ -361,7 +352,6 @@
 
     <!-- الهيدر -->
     <header>
-        <!-- النص بخط عريض، واضح، ومتحرك -->
         <a href="#home" class="header-logo-text">ميجا لكاميرات المراقبة والامنية</a>
         <nav>
             <ul>
@@ -407,7 +397,7 @@
                 <div class="service-info">
                     <h3 class="service-title">كاميرات المراقبة الداخلية والخارجية</h3>
                     <p class="service-desc">كاميرات بدقة عالية جداً (HD / 4K) مع خاصية الرؤية الليلية الملونة ومقاومة العوامل الجوية.</p>
-                    <a href="#contact" class="btn" style="background-color: var(--primary-color); color: var(--white); padding: 0.5rem 1rem; font-size: 0.9rem; animation: none;">استفسر عن المنتج</a>
+                    <a href="gallery.html" class="btn" style="background-color: var(--primary-color); color: var(--white); padding: 0.5rem 1rem; font-size: 0.9rem; animation: none;">استفسر عن المنتج</a>
                 </div>
             </div>
             <!-- خدمة 2 -->
@@ -416,7 +406,7 @@
                 <div class="service-info">
                     <h3 class="service-title">أنظمة الربط والمتابعة عبر الهواتف</h3>
                     <p class="service-desc">تابع كاميراتك مباشرة من هاتفك الذكي أينما كنت عبر تطبيقات آمنة وسريعة البث المباشر.</p>
-                    <a href="#contact" class="btn" style="background-color: var(--primary-color); color: var(--white); padding: 0.5rem 1rem; font-size: 0.9rem; animation: none;">استفسر عن المنتج</a>
+                    <a href="gallery.html" class="btn" style="background-color: var(--primary-color); color: var(--white); padding: 0.5rem 1rem; font-size: 0.9rem; animation: none;">استفسر عن المنتج</a>
                 </div>
             </div>
             <!-- خدمة 3 -->
@@ -425,7 +415,7 @@
                 <div class="service-info">
                     <h3 class="service-title">أجهزة التسجيل وأجهزة الإنذار</h3>
                     <p class="service-desc">أجهزة DVR و NVR بأحجام تخزين عالية، بالإضافة إلى أنظمة الإنذار ضد السرقة والحريق.</p>
-                    <a href="#contact" class="btn" style="background-color: var(--primary-color); color: var(--white); padding: 0.5rem 1rem; font-size: 0.9rem; animation: none;">استفسر عن المنتج</a>
+                    <a href="gallery.html" class="btn" style="background-color: var(--primary-color); color: var(--white); padding: 0.5rem 1rem; font-size: 0.9rem; animation: none;">استفسر عن المنتج</a>
                 </div>
             </div>
         </div>
@@ -438,7 +428,6 @@
     </footer>
 
     <script>
-        // دالة زر المعاينة الرئيسية
         function toggleSubIcons() {
             const btn = document.getElementById('inspectBtn');
             const subIcons = document.getElementById('subIcons');
@@ -447,13 +436,11 @@
             subIcons.classList.toggle('show');
         }
 
-        // دالة قائمة اتصل بنا في الهيدر
         function toggleNavContact() {
             const navSubIcons = document.getElementById('navSubIcons');
             navSubIcons.classList.toggle('show');
         }
 
-        // إغلاق القوائم عند النقر في أي مكان خارجها
         window.addEventListener('click', function(e) {
             const ctaContainer = document.querySelector('.cta-container');
             if (ctaContainer && !ctaContainer.contains(e.target)) {
