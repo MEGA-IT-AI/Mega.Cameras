@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Tajawal:wght@500;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #00b4d8; /* الأزرق السماوي الأساسي */
+            --primary-color: #00b4d8;
             --secondary-color: #0096b4;
             --accent-color: #00b4d8;
             --text-color: #334155;
@@ -16,7 +16,7 @@
             --white: #ffffff;
             --danger-color: #ef4444;
             --whatsapp-color: #22c55e;
-            --logo-color: #ffd166; /* اللون الأصفر الذهبي */
+            --logo-color: #ffd166;
         }
 
         * {
@@ -266,7 +266,7 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: auto;
             padding: 4rem 2rem;
         }
@@ -281,37 +281,38 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
         }
 
         .service-card {
             background: var(--white);
-            border-radius: 10px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
             border-top: 4px solid var(--primary-color);
         }
 
         .service-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
         }
 
         .service-img {
-            height: 180px;
+            height: 200px;
             background-size: cover;
             background-position: center;
         }
 
         .service-info {
-            padding: 1.5rem;
+            padding: 1.8rem;
             text-align: center;
         }
 
         .service-title {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
             color: var(--primary-color);
             font-weight: bold;
         }
@@ -320,6 +321,22 @@
             font-size: 0.95rem;
             color: #64748b;
             margin-bottom: 1.5rem;
+        }
+
+        .view-btn {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 0.7rem 1.8rem;
+            font-size: 1rem;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .view-btn:hover {
+            background-color: #0096b4;
         }
 
         footer {
@@ -391,31 +408,22 @@
     <div id="services" class="container">
         <h2 class="section-title">حلول المراقبة والحماية</h2>
         <div class="services-grid">
-            <!-- خدمة 1 -->
+            <!-- منتجات هيكفيجن -->
             <div class="service-card">
-                <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=500&q=80');"></div>
+                <div class="service-img" style="background-image: url('6.png');"></div>
                 <div class="service-info">
-                    <h3 class="service-title">كاميرات المراقبة الداخلية والخارجية</h3>
-                    <p class="service-desc">كاميرات بدقة عالية جداً (HD / 4K) مع خاصية الرؤية الليلية الملونة ومقاومة العوامل الجوية.</p>
-                    <a href="gallery.html" class="btn" style="background-color: var(--primary-color); color: var(--white); padding: 0.5rem 1rem; font-size: 0.9rem; animation: none;">استفسر عن المنتج</a>
+                    <h3 class="service-title">منتجات هيكفيجن (Hikvision)</h3>
+                    <p class="service-desc">كاميرات مراقبة وأجهزة تسجيل عالية الجودة والإنذارات الذكية بمواصفات عالمية.</p>
+                    <a href="gallery.html" class="view-btn">مشاهدة المنتجات</a>
                 </div>
             </div>
-            <!-- خدمة 2 -->
+            <!-- منتجات هاي لوك -->
             <div class="service-card">
-                <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=500&q=80');"></div>
+                <div class="service-img" style="background-image: url('5.png');"></div>
                 <div class="service-info">
-                    <h3 class="service-title">أنظمة الربط والمتابعة عبر الهواتف</h3>
-                    <p class="service-desc">تابع كاميراتك مباشرة من هاتفك الذكي أينما كنت عبر تطبيقات آمنة وسريعة البث المباشر.</p>
-                    <a href="gallery.html" class="btn" style="background-color: var(--primary-color); color: var(--white); padding: 0.5rem 1rem; font-size: 0.9rem; animation: none;">استفسر عن المنتج</a>
-                </div>
-            </div>
-            <!-- خدمة 3 -->
-            <div class="service-card">
-                <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=500&q=80');"></div>
-                <div class="service-info">
-                    <h3 class="service-title">أجهزة التسجيل وأجهزة الإنذار</h3>
-                    <p class="service-desc">أجهزة DVR و NVR بأحجام تخزين عالية، بالإضافة إلى أنظمة الإنذار ضد السرقة والحريق.</p>
-                    <a href="gallery.html" class="btn" style="background-color: var(--primary-color); color: var(--white); padding: 0.5rem 1rem; font-size: 0.9rem; animation: none;">استفسر عن المنتج</a>
+                    <h3 class="service-title">منتجات هاي لوك (HiLook)</h3>
+                    <p class="service-desc">أنظمة مراقبة اقتصادية وفعالة ومناسبة للمنازل والمحلات التجارية بنقاء صورة ممتاز.</p>
+                    <a href="gallery2.html" class="view-btn">مشاهدة المنتجات</a>
                 </div>
             </div>
         </div>

@@ -10,8 +10,6 @@
             --primary-color: #00b4d8;
             --bg-light: #f1faee;
             --white: #ffffff;
-            --whatsapp-color: #22c55e;
-            --danger-color: #ef4444;
         }
         * {
             margin: 0;
@@ -45,87 +43,102 @@
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
             text-align: center;
             padding-bottom: 1rem;
-            transition: transform 0.3s;
         }
         .gallery-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
         }
-        .gallery-card img {
+        .img-container {
             width: 100%;
-            height: 220px;
+            height: 240px;
+            overflow: hidden;
+        }
+        .img-container img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
             display: block;
+            transition: transform 0.4s ease;
         }
-        .gallery-card h3 {
-            margin: 1rem 0 0.5rem;
-            font-size: 1.1rem;
-            color: var(--primary-color);
+        /* تكبير الصورة تلقائياً عند الوقوف عليها */
+        .gallery-card:hover .img-container img {
+            transform: scale(1.12);
         }
-        .btn-contact {
+        .product-tag {
             display: inline-block;
-            margin-top: 0.5rem;
-            padding: 0.5rem 1.2rem;
-            background-color: var(--whatsapp-color);
+            margin-top: 1rem;
+            padding: 0.4rem 1.5rem;
+            background-color: var(--primary-color);
             color: var(--white);
-            text-decoration: none;
-            border-radius: 20px;
             font-weight: bold;
-            font-size: 0.9rem;
+            border-radius: 20px;
+            font-size: 0.95rem;
         }
         .back-btn {
             display: block;
             width: fit-content;
-            margin: 2rem auto 0;
+            margin: 2.5rem auto 0;
             padding: 0.7rem 1.8rem;
             background-color: var(--primary-color);
             color: var(--white);
             text-decoration: none;
             border-radius: 25px;
             font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .back-btn:hover {
+            background-color: #0096b4;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1 class="header-title">استفسار عن المنتجات والأنظمة</h1>
+        <h1 class="header-title">معرض المنتجات والأنظمة</h1>
 
         <div class="gallery-grid">
             <!-- صورة 11 -->
             <div class="gallery-card">
-                <img src="11.png" alt="منتج 11">
-                <h3>منتج / نظام رقم 11</h3>
-                <a href="https://wa.me/201010255123?text=استفسار%20عن%20المنتج%2011" class="btn-contact" target="_blank">طلب عبر واتساب</a>
+                <div class="img-container">
+                    <img src="11.png" alt="منتج 11">
+                </div>
+                <span class="product-tag">منتج</span>
             </div>
 
             <!-- صورة 12 -->
             <div class="gallery-card">
-                <img src="12.png" alt="منتج 12">
-                <h3>منتج / نظام رقم 12</h3>
-                <a href="https://wa.me/201010255123?text=استفسار%20عن%20المنتج%2012" class="btn-contact" target="_blank">طلب عبر واتساب</a>
+                <div class="img-container">
+                    <img src="12.png" alt="منتج 12">
+                </div>
+                <span class="product-tag">منتج</span>
             </div>
 
             <!-- صورة 13 -->
             <div class="gallery-card">
-                <img src="13.png" alt="منتج 13">
-                <h3>منتج / نظام رقم 13</h3>
-                <a href="https://wa.me/201010255123?text=استفسار%20عن%20المنتج%2013" class="btn-contact" target="_blank">طلب عبر واتساب</a>
+                <div class="img-container">
+                    <img src="13.png" alt="منتج 13">
+                </div>
+                <span class="product-tag">منتج</span>
             </div>
 
             <!-- صورة 14 -->
             <div class="gallery-card">
-                <img src="14.png" alt="منتج 14">
-                <h3>منتج / نظام رقم 14</h3>
-                <a href="https://wa.me/201010255123?text=استفسار%20عن%20المنتج%2014" class="btn-contact" target="_blank">طلب عبر واتساب</a>
+                <div class="img-container">
+                    <img src="14.png" alt="منتج 14">
+                </div>
+                <span class="product-tag">منتج</span>
             </div>
 
             <!-- صورة 15 -->
             <div class="gallery-card">
-                <img src="15.png" alt="منتج 15">
-                <h3>منتج / نظام رقم 15</h3>
-                <a href="https://wa.me/201010255123?text=استفسار%20عن%20المنتج%2015" class="btn-contact" target="_blank">طلب عبر واتساب</a>
+                <div class="img-container">
+                    <img src="15.png" alt="منتج 15">
+                </div>
+                <span class="product-tag">منتج</span>
             </div>
         </div>
 
