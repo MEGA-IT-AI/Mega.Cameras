@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ميجا للكاميرات المراقبة | حماية متكاملة لمنزلك وشركتك</title>
-    <!-- استيراد خطوط عربية مميزة من جوجل فونتس -->
+    <title>ميجا لكاميرات المراقبة والأنظمة الأمنية | حماية متكاملة لمنزلك وشركتك</title>
+    
+    <!-- استيراد الخطوط العربية من Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Tajawal:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- استيراد مكتبة الأيقونات Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
         :root {
             --primary-color: #00b4d8;
@@ -339,6 +344,7 @@
             background-color: #0096b4;
         }
 
+        /* الفوتر والتنسيقات المحدثة */
         footer {
             background-color: var(--primary-color);
             color: var(--white);
@@ -350,6 +356,41 @@
 
         footer p {
             color: var(--white);
+        }
+
+        .footer-credits {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-credits img {
+            height: 30px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .footer-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: var(--white);
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: transform 0.3s, background-color 0.3s, color 0.3s;
+        }
+
+        .footer-btn:hover {
+            transform: translateY(-3px);
+            background-color: var(--logo-color);
+            color: #1e293b;
         }
 
         @media (max-width: 768px) {
@@ -429,10 +470,15 @@
         </div>
     </div>
 
-    <!-- الفوتر وتفاصيل الاتصال -->
+    <!-- الفوتر وتفاصيل الاتصال المحدثة -->
     <footer id="contact">
-        <p>جميع الحقوق محفوظة © 2026 - ميجا للكاميرات المراقبة</p>
-        <p style="margin-top: 0.5rem; font-size: 0.95rem; color: var(--white); opacity: 0.9;">للحجز والاستفسار والصيانة: 01010255123 | خدمة العملاء متاحة 24/7</p>
+        <p>&copy; جميع الحقوق محفوظة - ميجا للكاميرات</p>
+        <div class="footer-credits">
+            <span>تصميم بواسطة</span>
+            <img src="100.png" alt="شعار التصميم">
+            <a href="tel:01010255123" class="footer-btn" title="اتصال هاتفي"><i class="fa-solid fa-phone"></i></a>
+            <a href="https://wa.me/201010255123" target="_blank" class="footer-btn" title="مراسلة عبر الواتساب"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
     </footer>
 
     <script>
